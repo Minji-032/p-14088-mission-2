@@ -92,11 +92,11 @@ public class CalcTest {
     void t17() {
         assertThat(Calc.run("10 * 20 + 10 + 5 * 2")).isEqualTo(220);
     }
-    /*@Test
+    @Test
     @DisplayName("(10 + 20) == 30")
     void t18() {
         assertThat(Calc.run("(10 + 20)")).isEqualTo(30);
-    }*/
+    }
     @Test
     @DisplayName("((10 + 20)) == 30")
     void t19() {
@@ -150,14 +150,14 @@ public class CalcTest {
     //----------------------------------------------------------------
     //내가 만든 테스트 다중괄호 확인하기
     @Test
-    @DisplayName("3 * 1 + (1 - (4 * 1 - (1 - 1)) * 3) == 0")
+    @DisplayName("((((1 + 2)) * 3) - 4) == 5")
     void t29() {
-        assertThat(Calc.run("3 * 1 + (1 - (4 * 1 - (1 - 1)) * 3)")).isEqualTo(-8);
+        assertThat(Calc.run("((((1 + 2)) * 3) - 4)")).isEqualTo(5);
     }
     @Test
-    @DisplayName("(1 + (2 + (3 + 4) * 2)) - 16 == 1")
+    @DisplayName("(1 + (2 + (3 + 4) * 2)) / 17 == 1")
     void t30() {
-        assertThat(Calc.run("(1 + (2 + (3 + 4) * 2)) - 16")).isEqualTo(1);
+        assertThat(Calc.run("(1 + (2 + (3 + 4) * 2)) / 17")).isEqualTo(1);
     }
     @Test
     @DisplayName("((1 + 1) * 4 - 2) * 2 == 12")
